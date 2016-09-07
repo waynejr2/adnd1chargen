@@ -1,6 +1,40 @@
 /**
  * Created by wayne on 9/1/2016.
  */
+(function() {
+    var DND = {
+
+        init : function() {
+            try {
+                alert("hi");
+                /*
+                this.init();
+                this.loadConfig();
+                this.loadState();
+                */
+            } catch(e) {
+                alert("Error: "+e);
+            }
+        },
+
+        helpers : {
+            registerEvent: function (element, event, handler, capture) {
+                if (/msie/i.test(navigator.userAgent)) {
+                    element.attachEvent('on' + event, handler);
+                } else {
+                    element.addEventListener(event, handler, capture);
+                }
+            }
+        }
+
+    };
+    DND.helpers.registerEvent(window, 'load', function() {
+        DND.init();
+    }, false);
+}());
+
+
+/*
 window.onload = function() {
 
 
@@ -70,3 +104,4 @@ window.onload = function() {
     console.log(messageMapping['critical']);
 
 };
+*/
