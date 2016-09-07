@@ -1,0 +1,12 @@
+.main_body {
+    FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Geneva, sans-serif; BACKGROUND-COLOR: #004400; color: #ffff00
+}
+.left_frame_top {
+     Z-INDEX: 1; LEFT: 10px; BACKGROUND-IMAGE: url(../img/thin-top.png); WIDTH: 380px; POSITION: absolute; TOP: 10px; HEIGHT: 18px;
+ }
+.left_frame {
+    Z-INDEX: 1; LEFT: 10px; BACKGROUND-IMAGE: url(../img/thin.png); WIDTH: 380px; POSITION: absolute; TOP: 27px; HEIGHT: 897px;
+}
+.level_ap_div {
+     BORDER-RIGHT: #000 2px solid; BORDER-TOP: #000 2px solid; Z-INDEX: 2; LEFT: 10px; BACKGROUND-IMAGE: url(../img/background-dark.jpg); BORDER-LEFT: #000 2px solid; WIDTH: 215px; BORDER-BOTTOM: #000 2px solid; POSITION: absolute; TOP: 2px; HEIGHT: 87px; BACKGROUND-COLOR: #000
+ }

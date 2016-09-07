@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8">
+<title>ADnD 1st Edition Character Generator</title>
+<link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
 </head>
-<body>
+<body class="main_body">
 
+<div class="left_frame_top"></div>
+<DIV class=left_frame>
+    <div class="box controls">
+        <div class="subtitle">Controls</div>
+        <form action="">
+            <input type="button" value="Random" id="buttonRun" title="Key: R"/>
+        </form>
+
+    </div>
+
+    <table class="">
+        <tbody>
+        <tr>
+            <td>Choose Race</td>
+        </tr>
+        <tr>
+            <td>Human</td>
+            <td>Elf</td>
+            <td>Dwarf</td>
+            <td>Halfling</td>
+            <td>Half-elf</td>
+            <td>Half-orc</td>
+            <td>Gnome</td>
+        </tr>
+        <tr>
+            <TD class="smt_normal smt_widths"><INPUT id=radio1
+                                                     onclick=select_faction(0) type=radio value=0 name=faction></TD>
+            <TD class="smt_normal smt_widths"><INPUT id=radio2
+                                                     onclick=select_faction(1) type=radio value=1 name=faction></TD>
+            <TD class="smt_normal smt_widths"><INPUT id=radio3
+                                                     onclick=select_faction(2) type=radio value=2 name=faction></TD>
+            <TD class="smt_normal smt_widths"><INPUT id=radio4
+                                                     onclick=select_faction(3) type=radio value=3 name=faction></TD>
+            <TD class="smt_normal smt_widths"><INPUT id=radio5
+                                                     onclick=select_faction(4) type=radio value=4 name=faction></TD>
+            <TD class="smt_normal smt_widths"><INPUT id=radio6
+                                                     onclick=select_faction(5) type=radio value=5 name=faction></TD>
+            <TD class="smt_normal smt_widths"><INPUT id=radio7
+                                                     onclick=select_faction(6) type=radio value=5 name=faction></TD>
+        </tr>
+        </tbody>
+    </table>
+</DIV>
 </body>
+<script src="assets/js/ADnD1CharGen.js" type="text/javascript"></script>
 </html>
