@@ -1,10 +1,138 @@
 /**
  * Created by wayne on 9/1/2016.
  */
-(function() {
+
+var a = {
+    "food": "apple",
+    "drink": "ale",
+    "toys": ["hat", "spoon", "rock"]
+};
+
+var c = {"str":0};
+
+var b = {
+    "race": {
+        "dwarf": {
+            "female": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            },
+            "male": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            }
+        },
+        "elf": {
+            "female": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            },
+            "male": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            }
+        },
+        "gnome": {
+            "female": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            },
+            "male": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            }
+        },
+        "half-elf": {
+            "female": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            },
+            "male": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            }
+        },
+        "half-orc": {
+            "female": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            },
+            "male": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            }
+        },
+        "halfling": {
+            "female": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            },
+            "male": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            }
+        },
+        "human": {
+            "female": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            },
+            "male": {
+                "attr": {
+                    "min": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "max": ["0", "0", "0", "0", "0", "0", "0", "0"],
+                    "adjustment": ["0", "0", "0", "0", "0", "0", "0", "0"]
+                }
+            }
+        }
+    }
+};
+
+
+
+(function () {
     var DND = {
 
-        init : function() {
+        init: function () {
             try {
                 alert("hi");
 
@@ -16,17 +144,23 @@
                 //DND.helpers.roll4D6();
                 //DND.helpers.rollAttribute();
                 DND.helpers.rollCharacter();
+                window.console.log(b);
+                window.console.log(b.race.elf.female.attr);
+                window.console.log(a.drink);
+                window.console.log(a.toys[0]);
+                window.console.log(a.toys[1]);
+                window.console.log(a.toys[2]);
                 /*
-                this.init();
-                this.loadConfig();
-                this.loadState();
-                */
-            } catch(e) {
-                alert("Error: "+e);
+                 this.init();
+                 this.loadConfig();
+                 this.loadState();
+                 */
+            } catch (e) {
+                alert("Error: " + e);
             }
         },
 
-        helpers : {
+        helpers: {
             registerEvent: function (element, event, handler, capture) {
                 if (/msie/i.test(navigator.userAgent)) {
                     element.attachEvent('on' + event, handler);
@@ -35,12 +169,16 @@
                 }
             },
 
-            sortDiceAsc: function(array) {
-                return array.sort(function(a, b){return b-a});
+            sortDiceAsc: function (array) {
+                return array.sort(function (a, b) {
+                    return b - a
+                });
             },
 
-            sortDiceDsc: function(array) {
-                return array.sort(function(a, b){return a-b});
+            sortDiceDsc: function (array) {
+                return array.sort(function (a, b) {
+                    return a - b
+                });
             },
 
             rollDie: function (max, min) {
@@ -48,8 +186,8 @@
             },
 
             rollD6: function () {
-               return this.rollDie(6,1);
-             },
+                return this.rollDie(6, 1);
+            },
 
             rollStrengthPercentage: function () {
                 return this.rollDie(100, 0);
@@ -63,14 +201,14 @@
                     arr.push(this.rollD6());
                 }
                 //arr.sort(function(a, b){return b-a});
-                 window.console.log(this.sortDiceAsc(arr));
+                window.console.log(this.sortDiceAsc(arr));
             },
 
-            roll4D6: function() {
+            roll4D6: function () {
                 var arr = [];
                 var i;
 
-                for(i=0; i < 4; i++) {
+                for (i = 0; i < 4; i++) {
                     arr.push(this.rollD6());
                 }
                 //window.console.log(this.sortDiceAsc(arr));
@@ -82,11 +220,11 @@
             },
 
             best3Attribute: function (arr) {
-              return arr[0] + arr[1] + arr[2];
+                return arr[0] + arr[1] + arr[2];
             },
 
             worst1Attribute: function (arr) {
-              return arr[3];
+                return arr[3];
             },
 
             rollCharacter: function () {
@@ -120,26 +258,27 @@
                 a.luck.ar.push(diceRoller.worst1Attribute(a.dex.ar));
                 a.luck.ar.push(diceRoller.worst1Attribute(a.con.ar));
                 a.luck.ar.push(diceRoller.worst1Attribute(a.cha.ar));
-                a.luck.value = a.luck.ar.reduce(function(total, num){return total + num});
+                a.luck.value = a.luck.ar.reduce(function (total, num) {
+                    return total + num
+                });
 
                 window.console.log(a);
 
 
-
-               // var str = int = wis = dex = con = char = luck = 0;
-               // var strar = this.rollAttribute();
-               // var intar = this.rollAttribute();
-               // var wisar = this.rollAttribute();
-               // var dexar = this.rollAttribute();
-               // var conar = this.rollAttribute();
-               // var charar = this.rollAttribute();
-               //
-               // str = this.best3Attribute(strar);
-               // luck += this.worst1Attribute(strar);
-               // str = this.best3Attribute(strar);
-               // luck += this.worst1Attribute(strar);
-               //
-               // window.console.log("str: " + str);
+                // var str = int = wis = dex = con = char = luck = 0;
+                // var strar = this.rollAttribute();
+                // var intar = this.rollAttribute();
+                // var wisar = this.rollAttribute();
+                // var dexar = this.rollAttribute();
+                // var conar = this.rollAttribute();
+                // var charar = this.rollAttribute();
+                //
+                // str = this.best3Attribute(strar);
+                // luck += this.worst1Attribute(strar);
+                // str = this.best3Attribute(strar);
+                // luck += this.worst1Attribute(strar);
+                //
+                // window.console.log("str: " + str);
 
 
             }
@@ -147,19 +286,19 @@
         }
 
     };
-    DND.helpers.registerEvent(window, 'load', function() {
+    DND.helpers.registerEvent(window, 'load', function () {
         DND.init();
     }, false);
 
 }());
 
 myCharacter = (function () {
-    
+
     var getInfo = function () {
         return "this is my character";
     };
 
-    return { getInfo : getInfo };
+    return {getInfo: getInfo};
 })();
 
 
@@ -170,7 +309,7 @@ diceRoller = (function () {
     };
 
     var rollD6 = function () {
-        return rollDie(6,1);
+        return rollDie(6, 1);
     };
 
     var rollStrengthPercentage = function () {
@@ -188,22 +327,26 @@ diceRoller = (function () {
     };
 
 
-    var roll4D6 = function() {
+    var roll4D6 = function () {
         var arr = [];
         var i;
 
-        for(i=0; i < 4; i++) {
+        for (i = 0; i < 4; i++) {
             arr.push(rollD6());
         }
         return arr;
     };
 
-    var sortDiceAsc = function(array) {
-        return array.sort(function(a, b){return b-a});
+    var sortDiceAsc = function (array) {
+        return array.sort(function (a, b) {
+            return b - a
+        });
     };
 
-    var sortDiceDsc = function(array) {
-        return array.sort(function(a, b){return a-b});
+    var sortDiceDsc = function (array) {
+        return array.sort(function (a, b) {
+            return a - b
+        });
     };
 
     var rollAttribute = function () {
@@ -220,84 +363,84 @@ diceRoller = (function () {
 
 
     return {
-        rollDie : rollDie,
-        roll3D6 : roll3D6,
-        roll4D6 : roll4D6,
-        rollAttribute : rollAttribute,
-        best3Attribute : best3Attribute,
-        worst1Attribute : worst1Attribute
+        rollDie: rollDie,
+        roll3D6: roll3D6,
+        roll4D6: roll4D6,
+        rollAttribute: rollAttribute,
+        best3Attribute: best3Attribute,
+        worst1Attribute: worst1Attribute
     };
 
 })();
 
 /*
-window.onload = function() {
+ window.onload = function() {
 
 
-    function select_faction(id) {
-        alert(id);
-    }
+ function select_faction(id) {
+ alert(id);
+ }
 
-    function rolldie(min, max) {
-        // return Math.floor(Math.random()*(max-min)+min);
-        // return (Math.floor(Math.random() * (max - min))) + min;
-        min = Math.ceil(min);
-        max = Math.floor(max + 1);
-        return Math.floor(Math.random() * (max - min) + min);
-    }
+ function rolldie(min, max) {
+ // return Math.floor(Math.random()*(max-min)+min);
+ // return (Math.floor(Math.random() * (max - min))) + min;
+ min = Math.ceil(min);
+ max = Math.floor(max + 1);
+ return Math.floor(Math.random() * (max - min) + min);
+ }
 
-    function rollFourDieSixKeepTheHighestThree() {
-        var dieRecord = [0, 0, 0, 0];
-        var value = 0;
-        var tempValue = 0
-        var sum = 0;
-        for (dieRecordIndex = 0; dieRecordIndex < 4; dieRecordIndex++) {
-            value = rolldie(1, 6);
-            for (sortDieIndex = 0; sortDieIndex <= dieRecordIndex; sortDieIndex++) {
-                if (value > dieRecord[sortDieIndex]) {
-                    tempValue = dieRecord[sortDieIndex];
-                    dieRecord[sortDieIndex] = value;
-                    value = tempValue;
-                }
-            }
-        }
-        console.log(dieRecord);
-        for (dieRecordIndex = 0; dieRecordIndex < 3; dieRecordIndex++) {
-            sum = sum + dieRecord[dieRecordIndex];
-        }
-        console.log(sum);
+ function rollFourDieSixKeepTheHighestThree() {
+ var dieRecord = [0, 0, 0, 0];
+ var value = 0;
+ var tempValue = 0
+ var sum = 0;
+ for (dieRecordIndex = 0; dieRecordIndex < 4; dieRecordIndex++) {
+ value = rolldie(1, 6);
+ for (sortDieIndex = 0; sortDieIndex <= dieRecordIndex; sortDieIndex++) {
+ if (value > dieRecord[sortDieIndex]) {
+ tempValue = dieRecord[sortDieIndex];
+ dieRecord[sortDieIndex] = value;
+ value = tempValue;
+ }
+ }
+ }
+ console.log(dieRecord);
+ for (dieRecordIndex = 0; dieRecordIndex < 3; dieRecordIndex++) {
+ sum = sum + dieRecord[dieRecordIndex];
+ }
+ console.log(sum);
 
-    }
+ }
 
-//rollFourDieSixKeepTheHighestThree()
+ //rollFourDieSixKeepTheHighestThree()
 
-//registerEvent(document.getElementById('buttonRun'), 'click', run, false);
+ //registerEvent(document.getElementById('buttonRun'), 'click', run, false);
 
-    //var foo = document.getElementById('buttonRun');
-    //console.log(foo);
-    registerEvent(document.getElementById('buttonRun'), 'click', rollFourDieSixKeepTheHighestThree, false);
-    //registerEvent(document.getElementById('buttonRun'), 'click', console.log("wjr"), false);
-    //console.log(document.getElementById('buttonRun'));
+ //var foo = document.getElementById('buttonRun');
+ //console.log(foo);
+ registerEvent(document.getElementById('buttonRun'), 'click', rollFourDieSixKeepTheHighestThree, false);
+ //registerEvent(document.getElementById('buttonRun'), 'click', console.log("wjr"), false);
+ //console.log(document.getElementById('buttonRun'));
 
-     function registerEvent(element, event, handler, capture) {
-     if (/msie/i.test(navigator.userAgent)) {
-     element.attachEvent('on' + event, handler);
-     } else { console.log("xx");
-     element.addEventListener(event, handler, capture);
-     }
-     }
+ function registerEvent(element, event, handler, capture) {
+ if (/msie/i.test(navigator.userAgent)) {
+ element.attachEvent('on' + event, handler);
+ } else { console.log("xx");
+ element.addEventListener(event, handler, capture);
+ }
+ }
 
 
-    var messageMapping = {
-        basic: "basic",
-        ad: "ad",
-        notification: "notification",
-        warning: "warning",
-        critical: "critical"
-    };
+ var messageMapping = {
+ basic: "basic",
+ ad: "ad",
+ notification: "notification",
+ warning: "warning",
+ critical: "critical"
+ };
 
-    console.log(messageMapping['basic']);
-    console.log(messageMapping['critical']);
+ console.log(messageMapping['basic']);
+ console.log(messageMapping['critical']);
 
-};
-*/
+ };
+ */
